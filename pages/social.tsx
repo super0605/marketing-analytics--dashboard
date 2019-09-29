@@ -1,0 +1,22 @@
+import React from 'react';
+import withAuth from '../hocs/withAuth';
+import styled from "styled-components";
+import {BasePage} from "../components";
+import {sidebarItems } from '../constants/constants';
+import {HeadStyle } from '../constants/head';
+
+import wireframeSocial from "../static/media/images/wireframes__social.jpg";
+
+const Placeholder = styled.img`
+  width: 100%;
+`;
+
+export default withAuth(() => (
+  <div>
+    <HeadStyle />
+    
+    <BasePage activePage={sidebarItems.social}>
+      <Placeholder src={wireframeSocial} />
+    </BasePage>
+  </div>
+));
